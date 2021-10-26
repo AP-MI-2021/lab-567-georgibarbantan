@@ -1,11 +1,13 @@
 from domain.vanzari import toString
 from logic.CRUD import addSale, deleteSale, modifySale
+from logic.functionality import reducere
 
 
 def printMenu():
     print("1. Adaugare vanzare ")
     print("2. Stergere vanzare ")
     print("3. Modificare vanzare ")
+    print("4. Aplicarea unui discount de 5% pentru toate reducerile silver și 10% pentru toate reducerile gold. ")
     print("a. Afisare vanzare ")
     print("X. Iesire")
 
@@ -33,6 +35,9 @@ def uiModifySale(lista):
     tip_red_cl = input("Dati noul tip de reducere client ")
     return modifySale(id, titlu, gen, pret, tip_red_cl, lista)
 
+def uiReducere(lista):
+    return reducere(lista)
+
 def showAll(lista):
     for sale in lista:
         print(toString(sale))
@@ -48,6 +53,8 @@ def runMenu(lista):
             lista = uiDeleteSale(lista)
         elif optiune=="3":
             lista = uiModifySale(lista)
+        elif optiune=="4":
+            lista = uiReducere(lista)
         elif optiune=="a":
             showAll(lista)
         elif optiune=="x":

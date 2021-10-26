@@ -11,41 +11,41 @@ def getNewSale(_id: str, _titlu: str, _gen: str, _pret: float, _tip_red_cl: str)
 
 def getId(sale):
     '''
-    Da id-ul unui obiect
-    :param obiect: dictionar ce retine un obiect
-    :return: id-ul obiectului
+    Da id-ul unei vanzari
+    :param sale: dictionar ce retine o vanzare
+    :return: id-ul vanzarii
     '''
     return sale["id"]
 
 def getTitlu(sale):
     '''
-    Da numele unui obiect
-    :param obiect: dictionar ce retine un obiect
-    :return: numele obiectului
+    Da titlul unei carti
+    :param sale: dictionar ce retine o vanzare
+    :return: titlul cartii
     '''
     return sale["titlu"]
 
 def getGen(sale):
     '''
-    Da descrierea unui obiect
-    :param obiect: dictionar ce retine un obiect
-    :return: descrierea obiectului
+    Da genul unei carti
+    :param sale: dictionar ce retine o vanzare
+    :return: genul cartii
     '''
     return sale["gen"]
 
 def getPret(sale):
     '''
-    Da pretul unui obiect
-    :param obiect: dictionar ce retine un obiect
-    :return: pretul obiectului
+    Da pretul unei carti
+    :param sale: dictionar ce retine o vanzare
+    :return: pretul cartii
     '''
     return sale["pret"]
 
 def getTipRedCl(sale):
     '''
-    Da locatia unui obiect
-    :param obiect: dictionar ce retine un obiect
-    :return: locatia obiectului
+    Da tipul de reducere al unui client
+    :param sale: dictionar ce retine o vanzare
+    :return: tipul de reducere al unui client
     '''
     return sale["tip_red_cl"]
 
