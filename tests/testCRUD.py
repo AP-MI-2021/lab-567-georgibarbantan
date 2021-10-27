@@ -1,4 +1,4 @@
-from domain.vanzari import getId, getTitlu, getGen, getPret, getTipRedCl
+from domain.vanzari2 import getId, getTitlu, getGen, getPret, getTipRedCl
 from logic.CRUD import addSale, getById, deleteSale, modifySale
 
 

@@ -1,4 +1,4 @@
-from domain.vanzari import getNewSale, getId
+from domain.vanzari2 import getNewSale, getId
 
 
 def addSale(id, titlu, gen, pret, tip_red_cl, lista):

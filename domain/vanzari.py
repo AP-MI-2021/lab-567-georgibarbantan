@@ -50,7 +50,7 @@ def getTipRedCl(sale):
     return sale["tip_red_cl"]
 
 def toString(sale):
-    return "Id: {}, Nume: {}, Descriere: {}, Pret: {}, Locatie: {}".format(
+    return "Id: {}, Titlu: {}, Gen: {}, Pret: {}, TipRedCl: {}".format(
         getId(sale),
         getTitlu(sale),
         getGen(sale),

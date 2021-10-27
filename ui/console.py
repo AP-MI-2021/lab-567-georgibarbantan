@@ -1,4 +1,4 @@
-from domain.vanzari import toString
+from domain.vanzari2 import toString
 from logic.CRUD import addSale, deleteSale, modifySale
 from logic.functionality import reducere
 

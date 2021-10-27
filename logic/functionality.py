@@ -1,10 +1,9 @@
-from domain.vanzari import getTipRedCl, getNewSale, getId, getTitlu, getGen, getPret
+from domain.vanzari2 import getTipRedCl, getNewSale, getId, getTitlu, getGen, getPret
 
 
 def reducere(lista):
     '''
         Aplicarea unui discount de 5% pentru toate reducerile silver și 10% pentru toate reducerile gold.
-        :param tipreducere: string (tip reducere client)
         :param lista: lista de vanzari
         :return: lista in care se aplica un discount de 5% pentru toate reducerile silver și 10% pentru toate reducerile gold
     '''

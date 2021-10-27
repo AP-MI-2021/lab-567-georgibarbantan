@@ -1,4 +1,4 @@
-from domain.vanzari import getPret
+from domain.vanzari2 import getPret
 from logic.CRUD import addSale, getById
 from logic.functionality import reducere
 

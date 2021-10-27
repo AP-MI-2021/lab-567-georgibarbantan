@@ -1,4 +1,4 @@
-from domain.vanzari import getNewSale, getId, getTitlu, getGen, getPret, getTipRedCl
+from domain.vanzari2 import getNewSale, getId, getTitlu, getGen, getPret, getTipRedCl
 
 
 def test_sale():
