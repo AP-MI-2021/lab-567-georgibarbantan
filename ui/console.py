@@ -15,27 +15,39 @@ def printMenu():
 
 
 def uiAddSale(lista):
-    id = input("Dati id-ul ")
-    titlu = input("Dati titlul ")
-    gen = input("Dati genul ")
-    pret = float(input("Dati pretul "))
-    tip_red_cl = input("Dati tipul reducere client ")
-
-    return addSale(id, titlu, gen, pret, tip_red_cl, lista)
+    try:
+        id = input("Dati id-ul ")
+        titlu = input("Dati titlul ")
+        gen = input("Dati genul ")
+        pret = float(input("Dati pretul "))
+        tip_red_cl = input("Dati tipul reducere client ")
+        return addSale(id, titlu, gen, pret, tip_red_cl, lista)
+    except ValueError as ve:
+        print("Eroare: {}".format(ve))
+        return lista
 
 
 def uiDeleteSale(lista):
-    id = input("Dati id-ul vanzarii pe care vreti sa o stergeti ")
-    return deleteSale(id,lista)
+    try:
+        id = input("Dati id-ul vanzarii pe care vreti sa o stergeti ")
+        return deleteSale(id,lista)
+    except ValueError as ve:
+        print("Eroare: {}".format(ve))
+        return lista
 
 
 def uiModifySale(lista):
-    id = input("Dati id-ul vanzarii de modificat ")
-    titlu = input("Dati noul titlu ")
-    gen = input("Dati noul gen ")
-    pret = float(input("Dati noul pret "))
-    tip_red_cl = input("Dati noul tip de reducere client ")
-    return modifySale(id, titlu, gen, pret, tip_red_cl, lista)
+    try:
+        id = input("Dati id-ul vanzarii de modificat ")
+        titlu = input("Dati noul titlu ")
+        gen = input("Dati noul gen ")
+        pret = float(input("Dati noul pret "))
+        tip_red_cl = input("Dati noul tip de reducere client ")
+        return modifySale(id, titlu, gen, pret, tip_red_cl, lista)
+    except ValueError as ve:
+        print("Eroare: {}".format(ve))
+        return lista
+
 
 def uiReducere(lista):
     return reducere(lista)

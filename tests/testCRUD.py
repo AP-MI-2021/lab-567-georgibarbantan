@@ -22,9 +22,14 @@ def test_deleteSale():
     assert getById("1",lista) is None
     assert getById("2", lista) is not None
 
-    lista = deleteSale("100",lista)
-    assert len(lista)==1
-    assert getById("2", lista) is not None
+    try:
+        lista = deleteSale("100", lista)
+        assert False
+    except ValueError:
+        assert len(lista) == 1
+        assert getById("2", lista) is not None
+    except Exception:
+        assert False
 
 def test_modifySale():
     lista = []

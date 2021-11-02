@@ -12,6 +12,8 @@ def addSale(id, titlu, gen, pret, tip_red_cl, lista):
     :param lista: lista de vanzari
     :return: o lista continand vechile vanzari si noua vanzare
     '''
+    if getById(id, lista) is not None:
+        raise ValueError("Id-ul exista deja! ")
     sale = getNewSale(id, titlu, gen, pret, tip_red_cl)
     return lista + [sale]
 
@@ -34,6 +36,8 @@ def deleteSale(id, lista):
     :param lista: lista de vanzari
     :return: o lista de vanzari fara vanzarea cu id-ul dat
     '''
+    if getById(id, lista) is None:
+        raise ValueError("Id-ul nu exista!")
 
     return [sale for sale in lista if getId(sale)!= id]
 
@@ -48,6 +52,9 @@ def modifySale(id, titlu, gen, pret, tip_red_cl, lista):
     :param lista: o lista de vanzari
     :return: lista modificata
     '''
+    if getById(id, lista) is None:
+        raise ValueError("Id-ul nu exista! ")
+
     listaNoua=[]
     for sale in lista:
         if getId(sale)==id:
