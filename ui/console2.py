@@ -72,21 +72,21 @@ def console_2(lista_sale):
             list_command_details = []
             for command_details in command:
                 list_command_details.append(command_details)
-            if list_command_details[0] == "Adaugare vanzare":
-                lista_sale = uiAddSale(list_command_details, lista_sale)
-            elif list_command_details[0] == "Stergere vanzare":
-                lista_sale = uiDeleteSale(list_command_details, lista_sale)
-            elif list_command_details[0] == "Modificare vanzare":
-                lista_sale = uiModifySale(list_command_details, lista_sale)
-            elif list_command_details[0] == "Modificare gen":
-                lista_sale = uiModifyGen(list_command_details, lista_sale)
-            elif list_command_details[0] == "Reducere":
-                lista_sale = uiReducere(list_command_details, lista_sale)
-            elif list_command_details[0] == "Show all":
-                showAll(lista_sale)
-            elif list_command_details[0] == "Iesire":
-                break
-            else:
-                print("Comanda nu este valida! Reincercati! ")
+                if list_command_details[0] == "Adaugare vanzare":
+                    lista_sale = uiAddSale(list_command_details, lista_sale)
+                elif list_command_details[0] == "Stergere vanzare":
+                    lista_sale = uiDeleteSale(list_command_details, lista_sale)
+                elif list_command_details[0] == "Modificare vanzare":
+                    lista_sale = uiModifySale(list_command_details, lista_sale)
+                elif list_command_details[0] == "Modificare gen":
+                    lista_sale = uiModifyGen(list_command_details, lista_sale)
+                elif list_command_details[0] == "Reducere":
+                    lista_sale = uiReducere(list_command_details, lista_sale)
+                elif list_command_details[0] == "Show all":
+                    showAll(lista_sale)
+                elif list_command_details[0] == "Iesire":
+                    break
+                else:
+                    print("Comanda nu este valida! Reincercati! ")
     except Exception as ex:
         print("Eroare, reincercati!", ex)
