@@ -1,6 +1,6 @@
 from logic.CRUD import addSale
 from tests.testall import runAllTests
-from ui.console import runMenu
+#from ui.console import runMenu
 from ui.console2 import console_2
 
 
