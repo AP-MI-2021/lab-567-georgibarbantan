@@ -1,7 +1,6 @@
 from domain.vanzari2 import toString
 from logic.CRUD import addSale, modifySale, deleteSale
-from logic.functionality import reducere
-from logic.functionality2 import modifyGen
+from logic.functionality import reducere, modifyGen
 
 
 def showAll(lista_sale):
