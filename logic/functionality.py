@@ -2,11 +2,11 @@ from domain.vanzari2 import getTipRedCl, getNewSale, getId, getTitlu, getGen, ge
 
 
 def reducere(lista):
-    '''
+    """
         Aplicarea unui discount de 5% pentru toate reducerile silver și 10% pentru toate reducerile gold.
         :param lista: lista de vanzari
-        :return: lista in care se aplica un discount de 5% pentru toate reducerile silver și 10% pentru toate reducerile gold
-    '''
+        :return: lista in care se aplica un discount de 5% pentru toate reducerile silver și 10% pentru toate  cele gold
+    """
 
     lista_new = []
 
@@ -34,12 +34,13 @@ def reducere(lista):
             lista_new.append(sale)
     return lista_new
 
+
 def modifyGen(titlu, gen, lista):
-    '''
+    """
     Modificarea genului unei carti cu un anumit titlu dat.
     :param lista: lista de vanzari
     :return: lista unde se modifica genul unei carti cu titlul dat
-    '''
+    """
 
     lista_new = []
 
@@ -57,6 +58,7 @@ def modifyGen(titlu, gen, lista):
             lista_new.append(sale)
 
     return lista_new
+
 
 def minimPriceGen(lista):
     """
@@ -82,6 +84,7 @@ def orderByPrice(lista):
     """
     return sorted(lista, key=lambda sale: getPret(sale))
 
+
 def titlesPerGen(lista):
     """
     Afiseaza numarul de titluri distincte pentru fiecare gen
@@ -97,3 +100,4 @@ def titlesPerGen(lista):
         else:
             result[gen] = 1
     return result
+
